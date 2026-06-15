@@ -1,7 +1,7 @@
 # wkf-roadmap-geral — Workflow de Gestão de Roadmap
 
 **ID:** W04
-**Versão:** v1.0 — 2026-06-04
+**Versão:** v1.1 — 2026-06-15
 **Status:** ativo
 **Responsável:** DTD/SETIS/SES-DF — victorarimatea
 
