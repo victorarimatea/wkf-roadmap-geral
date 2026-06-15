@@ -1,6 +1,6 @@
 # WORKFLOW.md — Gestão de Roadmap
 
-**Versão:** v1.0 — 2026-06-04
+**Versão:** v1.1 — 2026-06-15
 **Status:** ativo
 **Responsável:** Victor Leonardo Arimatea Queiroz — Diretor de Transformação Digital
 **Repositório:** wkf-roadmap-geral (W04)
@@ -13,7 +13,7 @@
 |---|---|
 | Nome do processo | Gestão de Roadmap |
 | ID | W04 |
-| Versão | v1.0 |
+| Versão | v1.1 |
 | Status | ativo |
 | Data de criação | 2026-06-04 |
 | Responsável | DTD/SETIS/SES-DF |
@@ -70,6 +70,15 @@ dentro do `hub-entrada` que recebe dois tipos de entrada:
 
 **Tipo 1 — Registros automáticos:** a S04 deposita ao final de cada operação
 no ecossistema. Registram fatos consumados — algo foi feito.
+
+
+**Princípio da staging (C9):**
+A staging não é um repositório de tarefas — é uma camada de governança entre
+ideias brutas e fatos operacionais. Um item na staging representa uma ideia que
+ainda não foi avaliada quanto ao seu valor para o ecossistema. Nenhuma ideia avança
+diretamente para o ROADMAP sem passar por aqui. A staging preserva o controle
+do mantenedor sobre o que entra no ecossistema e garante que nenhuma decisão
+de design seja tomada por impulso ou por acumulação silenciosa.
 
 **Tipo 2 — Ideias capturadas:** qualquer manifestação de ideia identificada
 em sessões com o Claude, seja por sinalização explícita do mantenedor ou por
@@ -173,6 +182,15 @@ Para cada item da staging, o mantenedor toma uma das quatro decisões:
 |---|---|---|
 | **Aprovar** | O item entra no ROADMAP confirmado | Migra para zona confirmada com estado de curadoria |
 | **Maturar** | A ideia tem potencial mas precisa de mais reflexão | Permanece na staging com nota de raciocínio |
+
+**Critério de maturação (C10):** um item em status `maturando` só retorna à
+curadoria quando: (a) o mantenedor trouxer nova evidência ou contexto que permita
+decidir, ou (b) a sessão W04 seguinte identificar que a dependência declarada foi
+resolvida. Itens que permanecem em `maturando` por mais de 3 sessões consecutivas
+sem evolução recebem revisão obrigatória — com decisão entre manter, arquivar
+ou rejeitar. Sem este critério, `maturando` vira sinônimo de "não decidido"
+e acumula indefinidamente.
+
 | **Arquivar** | A ideia foi avaliada e não avança agora | Vai para seção de arquivo da staging com motivo e data |
 | **Rejeitar** | O item não pertence ao ROADMAP | Arquivado com status `rejeitado` — nunca deletado |
 
@@ -228,6 +246,13 @@ sintoma → causa raiz → solução → status.
 | Ciclo fixo semanal | ❌ Não implementado — depende de lembrete manual | GitHub MCP + integração de calendário no longo prazo |
 
 ---
+
+## Seção 9 — Histórico de versões
+
+| Versão | Data | Tipo | Descrição |
+|---|---|---|---|
+| v1.1 | 2026-06-15 | Melhoria | Princípio da staging formalizado na Seção 2 (C9); critério de maturação adicionado à Etapa 5 (C10) — itens em `maturando` por 3+ sessões recebem revisão obrigatória |
+| v1.0 | 2026-06-04 | Criação | Processo inaugural de gestão de roadmap com staging area, diálogo estratégico e três camadas de curadoria |
 
 ## Seção 8 — Referências e dependências
 
